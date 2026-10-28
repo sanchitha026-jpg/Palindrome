@@ -1,6 +1,10 @@
-text = input("Enter a string: ")
+import sys
+def check(s):
+    return s == s[::-1]
 
-if text == text[::-1]:
-    print(text, "is a palindrome.")
+s = sys.argv[1]
+
+if check(s):
+    print("Palindrome")
 else:
-    print(text, "is not a palindrome.")
+    print("Not a palindrome")
